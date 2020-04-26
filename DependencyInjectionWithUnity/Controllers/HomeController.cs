@@ -13,7 +13,6 @@ namespace DependencyInjectionWithUnity.Controllers
 {
     public class HomeController : Controller
     {
-        //private readonly EmployeeDBEntities db = new EmployeeDBEntities();
         private readonly IEmployee employee;
 
         public HomeController(IEmployee _employee)
@@ -22,7 +21,6 @@ namespace DependencyInjectionWithUnity.Controllers
         }
 
 
-        // GET: Home
         public ActionResult Index()
         {
             var empList = employee.GetEmployees();
